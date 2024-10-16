@@ -1,0 +1,328 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Noto Sans";
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.logo{
+    width: 120px;
+}
+
+.list-items{
+   
+   /* to remove bullets from unordered list */
+    list-style: none;
+
+    /* to make the list horizonal (change block to inline) */
+    display: inline;
+
+    margin: 0px 20px;  
+
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.links:hover{
+    color: rgb(26, 191, 233);
+    text-decoration: underline;
+}
+
+.home-content{
+    margin: 5% 0px 0px 8%;
+   
+}
+
+#username{
+    font-size: 100px;
+    margin-bottom: 20px;  
+    font-family: "Dancing Script", serif; 
+}
+
+#lname{
+    font-family: "Dancing Script", serif;  
+    color:rgb(43, 183, 238);
+}
+
+#user-details{
+    line-height: 1.5; 
+}
+
+#tagline{
+    color: rgb(2, 18, 26);
+    font-family: "Dancing Script", serif;
+    font-size: 45px;
+}
+
+#download{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top:20px;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.home-img{
+    width: 50%;
+    height: 75%;
+    position:absolute; 
+    bottom:0px;
+    right:30px;
+    
+}
+
+.group1{
+    position:absolute;  
+    height:100% ;
+    bottom:0px;
+    left:50%;
+    transform: translateX(-50%);
+    
+    /* to give time delay for movement */
+    transition: bottom 2s, left 1s;
+}
+
+.home-img:hover #shape{
+    bottom: 80px;
+}
+
+ .home-img:hover #girl{
+    left: 30%;
+}
+    
+#about{
+    margin: 30% 8px 0px 8px;
+}
+
+.sectionHead{
+    margin-top: 50px; 
+    text-align: center;
+}
+
+.mainHead{
+    font-size: 40px;
+}
+
+.subHead{
+    font-size: 40px;
+    color: green;
+    font-family: "Dancing Script", serif;
+
+}
+
+
+/* usage of GRID concept */
+
+.aboutBody{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center; 
+    gap: 50px;
+}
+
+.img1{
+    width:95%;
+}
+
+.aboutContent{
+    font-size: 20px;
+    /text-align: justify;  
+}   
+
+.information{
+     margin-top: 1.3rem;  
+} 
+
+.infoBox{
+    margin-bottom: 10px; 
+}
+
+.infoBox>span{
+    margin-left: 1rem; 
+}
+
+/* SKILLS SECTION STYLING */
+
+#skills{
+    margin: 5% 8% 0px 8%;
+}
+
+.skillContents{
+   /* display: flex;
+   justify-content: space-between;
+    align-items: center; */
+
+   
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:50px;
+    margin-top: 20px ; 
+}
+
+.bars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem 0px;
+}
+
+/* grouping selector using comma */
+.barHead, .barPercent{
+
+font-weight: 600;
+font-size:1.5rem;
+} 
+
+.baseBar{
+    width:100%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom:0px;
+}
+
+.htmlBar{
+    background-color: orange;
+    width: 84%;
+}
+
+.cssBar{
+    background-color: orange;
+    width: 79%;
+
+}
+.jsBar{
+    background-color: orange;
+    width: 70%;
+    
+}
+.reactBar{    
+    background-color: orange;
+    width: 85%;
+    
+}
+
+#contact{
+    margin: 8% 8% 0px 8%;
+}
+
+.iconCollections{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    /* border: solid 2px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    
+}
+
+.brands{
+    color:black;
+    font-size: 2rem;
+}
+
+.icon:hover{
+    background-image:linear-gradient(to bottom right, rgb(24, 20, 230), rgb(20, 156, 197), rgb(22, 236, 76));
+}
+
+.icon:hover .brands{
+  color: white;
+
+  /* animations (declaration of the animation is done here) */
+  animation:rotate 4s;
+
+}
+
+
+/* DEFINING the ANIMATION */
+
+@keyframes rotate{
+    0%{
+        transform: rotate(30deg);
+    }
+
+    20%{
+        transform: rotate(-30deg);
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+    }
+    80%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
+}
+
+footer{
+    margin-top: 8%; 
+}
+
+#copyright{
+    text-align: center;
+    font-weight: 600;
+}
+
+.upArrow{
+   float:right;
+   margin-top: -40px; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(220, 231, 231);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(43, 243, 243, 0.459);
+    border-radius: 10px;
+
+}
